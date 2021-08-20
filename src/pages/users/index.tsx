@@ -1,3 +1,4 @@
+import LinkNext from "next/link"
 import { Box, Flex, Heading, Button, Icon, Table, Tr, Checkbox, Thead, Th, Tbody, Td, Text } from '@chakra-ui/react'
 import { RiAddLine, RiPencilLine } from 'react-icons/ri'
 
@@ -23,20 +24,23 @@ export default function UserList(){
                     <Flex mb="8" justify="space-between" align="center">
                         <Heading size="lg" fontWeight="normal">Usuarios</Heading>
 
-                        <Button
-                            as="a"
-                            size="sm"
-                            fontSize="sm"
-                            colorScheme="pink"
-                            leftIcon={
-                                <Icon
-                                    fontSize="20"
-                                    as={RiAddLine}
-                                />
-                            }
-                        >
-                            Criar novo
-                        </Button>
+                        <LinkNext href="/users/create">
+                            <Button
+                                as="a"
+                                size="sm"
+                                fontSize="sm"
+                                colorScheme="pink"
+                                cursor="pointer"
+                                leftIcon={
+                                    <Icon
+                                        fontSize="20"
+                                        as={RiAddLine}
+                                    />
+                                }
+                            >
+                                Criar novo
+                            </Button>
+                        </LinkNext>
                     </Flex>
 
                     <Table colorScheme="whiteAlpha">
