@@ -1,5 +1,5 @@
 import { Box, Divider, Flex, Heading, SimpleGrid, VStack, Button, HStack } from '@chakra-ui/react'
-
+import LinkNext from "next/link"
 import { Header } from '../../components/Header'
 import { Sidebar } from '../../components/Sidebar'
 import { Input } from '../../components/Form/Input'
@@ -18,18 +18,18 @@ export default function CreateUser(){
             >
                 <Sidebar />
 
-                <Box flex="1" bg="gray.800" borderRadius={8} p="8">
+                <Box flex="1" bg="gray.800" borderRadius={8} p={["6", "8"]}>
                    <Heading size="lg" fontWeight="normal">Criar Usuario</Heading>
 
                    <Divider my="6" borderColor="gray.700" />
 
                    <VStack spacing="8">
-                        <SimpleGrid minChildWidth="240px" spacing="8" w="100%"> 
+                        <SimpleGrid minChildWidth="240px" spacing={["6", "8"]} w="100%"> 
                             <Input name="name" label="Nome Completo" />
                             <Input name="email" label="E-mail" type="email"/>
                         </SimpleGrid>
 
-                        <SimpleGrid minChildWidth="240px" spacing="8" w="100%"> 
+                        <SimpleGrid minChildWidth="240px" spacing={["6", "8"]} w="100%"> 
                             <Input name="password" label="Senha" type="password" />
                             <Input name="password_confirmation" label="Confirmação da Senha" type="password"/>
                         </SimpleGrid>
@@ -37,8 +37,13 @@ export default function CreateUser(){
 
                    <Flex mt="8" justify="flex-end">
                         <HStack>
-                            <Button colorScheme="whiteAlpha">Cancelar</Button>
-                            <Button colorScheme="pink">Salvar</Button>
+                            <LinkNext href="/users" passHref>
+                                <Button as="a" colorScheme="whiteAlpha">Cancelar</Button>
+                            </LinkNext>
+
+                            <LinkNext href="/users" passHref>
+                                <Button as="a" colorScheme="pink">Salvar</Button>
+                            </LinkNext>
                         </HStack>
                    </Flex>
                 </Box>
