@@ -22,14 +22,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [NextJS](https://nextjs.org/docs)
-- [Axios](https://github.com/axios/axios)
-- [Web Hook](https://nextjs.org/docs/basic-features/data-fetching)
 - [Chakra UI](https://chakra-ui.com/docs/getting-started)
-- [Mirage](https://miragejs.com/docs/getting-started/introduction/)
 
 ## About 💻
 
-This project simulates a users control application.
-Its been made during the course of ReactJS from RocketSeat Ignite 2021.
-
-It has a bunch of interesting features, like pagination; API builder with MirageJS; query runner with react-query; chakra-ui; and husky to easier run linter.
+Esse e um projeto da Rocketseat ignite do capitulo 4, onde e construido um dashboard com graficos e totalmente estilizado com Chakra UI, projeto muito bonito, 
